@@ -1,0 +1,47 @@
+.wrapperContainer{
+    display: grid;
+    grid-gap: 20px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.wrapper{
+
+}
+
+.wrapper > div{
+    position: relative;
+    padding: 16px 0;
+}
+
+.wrapper > div:first-child{
+    padding-top: 0;
+}
+
+.wrapper > div:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e2e2e2;
+    height: 1px;
+}
+
+.bigImage {
+    position: relative;
+}
+
+h2{
+    font-family: Shurjo, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+figure{
+    padding-top: 66.67%;
+}

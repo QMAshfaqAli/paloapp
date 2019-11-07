@@ -1,0 +1,135 @@
+.banner{
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 180px;
+}
+
+.localNav{
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 450px;
+     margin-top: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    text-align: left;
+    color: #999999;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 40px;
+}
+
+.wrapper > div {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #121212;
+    position: relative;
+    grid-gap: 20px;
+}
+.bigImage:first-child h2{
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+}
+
+.bigImage:first-child p{
+    margin-top: 30px;
+    position: relative;
+}
+
+.bigImage:first-child p:before{
+    height: 1px;
+    width: 60px;
+    background: #e2e2e2;
+    content: '';
+    position: absolute;
+    top: -16px;
+}
+
+@media screen and (max-width: 875px){
+    .bigImage + .bigImage figure{
+        width: 30%;
+        float: left;
+        padding-top: 20%;
+    }
+
+    .bigImage + .bigImage div {
+        float: left;
+        margin-left: 12px;
+        width: calc(70% - 12px);
+    }
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 955px) {
+    .widget{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 956px) and (max-width: 1263px) {
+    .widget{
+        grid-column: span 3;
+    }
+}
+
+
+@media screen and (min-width: 1264px) {
+    .wrapper {
+        position: relative;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .lead{
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .lead:after{
+        content: '';
+        position: absolute;
+        right: -10px;
+        background: #E2E2E2;
+        width: 1px;
+        top: 0;
+        bottom: 0;
+    }
+
+    .n3{
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        background: #e2e2e2;
+        height: 1px;
+    }
+
+    .n4:before, .n5:before, .n6:before{
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        background: #e2e2e2;
+        height: 1px;
+    }
+    .n6:before{
+        right: 0;
+    }
+
+    .widget{
+        grid-row: 1/4;
+        grid-column: 4;
+    }
+
+    figure{
+        padding-top: 56.25%;
+    }
+}

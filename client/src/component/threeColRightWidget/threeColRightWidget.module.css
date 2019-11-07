@@ -1,0 +1,131 @@
+.banner{
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 100px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.wrapper > div {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #121212;
+    position: relative;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.wrapper > div.col3{
+    display: block;
+}
+
+.col2:before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    background: #E2E2E2;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+}
+
+.col2:after{
+    content: '';
+    position: absolute;
+    right: -10px;
+    background: #E2E2E2;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+}
+
+.col1 .bigImage h2{
+    font-size: 32px;
+    line-height: 1.31;
+    font-weight: normal;
+}
+
+.bigImage figure {
+    padding-top: 66.67%;
+}
+
+.leftImage{
+    position: relative;
+}
+
+.col2 .leftImage + .leftImage:before, .col1 .leftImage:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    background: #e2e2e2;
+    height: 1px;
+}
+
+.leftImage figure {
+    width: 30%;
+    float: left;
+    padding-top: 20%;
+}
+
+.leftImage div {
+    float: left;
+    margin-left: 12px;
+    width: calc(70% - 12px);
+}
+
+@media screen and (min-width: 876px) and (max-width: 1279px) {
+    .left-image img {
+        display: none;
+    }
+
+    .left-image div {
+        width: auto;
+        margin-left: 0;
+    }
+    .col2 .left-image{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: calc(25% - 20px);
+    }
+}
+
+@media screen and (max-width: 875px){
+    .lead{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .col1 .leftImage:after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        background: #e2e2e2;
+        height: 1px;
+    }
+
+    .col2:before{
+        width: 0;
+        content: none;
+    }
+
+    .col2:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        background: #E2E2E2;
+        height: 1px;
+        bottom: 0;
+        width: 100%;
+        top: auto;
+    }
+}

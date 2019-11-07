@@ -1,0 +1,135 @@
+header.App-header {
+    background: #fff;
+    /*box-shadow: 0 0 8px #00000059;*/
+}
+
+.App-header .Container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+.App-header .Container > a{
+    display: contents;
+}
+.logo {
+    width: 230px;
+    margin: 16px auto 0;
+}
+
+.main-menu {
+    width: 24px;
+    height: 24px;
+    margin: 12px 0;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    cursor: pointer;
+}
+
+.search {
+    float: left;
+    margin: 12px;
+    line-height: 26px;
+}
+
+.notification{
+    float: right;
+    margin: 16px 12px 12px;
+    line-height: 26px;
+    color: #999;
+}
+
+.login-button {
+    border-radius: 2px;
+    border: solid 1px #e2e2e2;
+    padding: 4px 24px;
+    display: block;
+    float: right;
+    font-family: Shurjo, sans-serif;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    color: #0099ff;
+    margin: 12px 0;
+    background-color: white;
+}
+
+.lb_desktop{
+    display: block;
+}
+
+.lb_mobile{
+    display: none;
+}
+
+nav {
+    margin-top: 16px;
+    border-bottom: 1px solid #121212;
+    border-top: 1px solid #E2E2E2;
+    text-align: center;
+}
+
+.App-header nav{
+    grid-column: 1/4;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px;
+}
+
+.dates {
+    float: left;
+    display: inline-block;
+    color: #999999;
+    clear: left;
+}
+.dates span{
+    font-weight: bold;
+}
+.edition {
+    float: right;
+    display: inline-block;
+    color: #999999;
+    clear: right;
+}
+
+@media screen and (max-width: 875px){
+    header.App-header {
+        box-shadow: 0 0 8px #00000059;
+        min-height: 56px;
+    }
+
+    .main-menu{
+        margin-top: 16px;
+    }
+
+    .logo {
+        width: 146px;
+        margin-left: 12px;
+        margin-top: 8px;
+    }
+
+    .search{display: none}
+    nav.nav{
+        display: none;
+    }
+
+    .login-button{
+        border: 0;
+        padding: 4px 8px;
+        margin: 14px 0 12px;
+    }
+
+    .lb_desktop, .dates, .edition{
+        display: none;
+    }
+
+    .lb_mobile{
+        display: block;
+        color: #555555;
+    }
+}
